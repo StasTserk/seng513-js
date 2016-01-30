@@ -8,8 +8,12 @@
 
     <script src="js/namespace.js"></script>
     <script>
-      document.addEventListener('click', function(){ 
+      document.addEventListener('click', function() { 
         App.bedazzleTheWebsite();
+      });
+
+      document.addEventListener('contextmenu', function() {
+        bedazzleTheWebsite();
       });
     </script>
   </body>

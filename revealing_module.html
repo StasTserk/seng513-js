@@ -12,11 +12,10 @@
           App.HelloWorld.Greet();                                                              // prints “Hi there, stranger”
           App.HelloWorld.Greet("bob");                                                         // prints “Hi there, bob”
         });
-        document.addEventListener("contextmenu", function(e) {
+        document.addEventListener("contextmenu", function() {
           App.HelloWorld.AddItem("App: " + typeof App);                                        // prints “object”
           App.HelloWorld.AddItem("App.HelloWorld: " + typeof App.HelloWorld);                  // prints “object”
           App.HelloWorld.AddItem("App.HelloWorld.Greet: " + typeof App.HelloWorld.Greet);      // prints “function”
-          e.preventDefault();
         });
       });
     </script>

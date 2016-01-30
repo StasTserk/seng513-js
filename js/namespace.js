@@ -2,7 +2,7 @@
 var App = App || {};
 
 // Add a function to the namespace
-App.bedazzleTheWebsite = function() {
+App.bedazzleTheWebsite = function () {
   console.log("App.bedazzleTheWebsite");
   var boring = document.getElementById("boring");
   var someColors = ["green", "blue", "pink", "yellow", "red"];
@@ -12,7 +12,7 @@ App.bedazzleTheWebsite = function() {
 
 // No conflict with global bedazzleTheWebsite
 // Note: this is equivalent to `var bedazzleTheWebsite = function() {`
-function bedazzleTheWebsite() {
+function bedazzleTheWebsite () {
   console.log("Global bedazzleTheWebsite");
   document.body.style.backgroundColor = document.body.style.backgroundColor === "black" ? "white" : "black";
 }

@@ -1,5 +1,5 @@
 var App = App || {};
-App.HelloWorld = (function() {
+App.HelloWorld = (function () {
   // Private variable
   var startOfGreeting = "Hi there, ";
 
@@ -18,13 +18,13 @@ App.HelloWorld = (function() {
   function createListElement(text) {
     var listItem = document.createElement("li");
     listItem.appendChild(document.createTextNode(text));
-    return listItem
+    return listItem;
   }
 
-  // Create an object liternal containing references to the functions that 
+  // Create an object liternal containing references to the functions that
   //  should be public, and return it
   return {
     AddItem: AddItem,
     Greet: Greet
-  }
-})();
+  };
+}());

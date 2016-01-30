@@ -1,6 +1,6 @@
 var App = App || {};
 
-App.Sleep = (function() {
+App.Sleep = (function () {
   var delay;
   var count = 0;
 
@@ -18,4 +18,4 @@ App.Sleep = (function() {
   return {
     Init: Init
   }
-})();
+}());

@@ -1,6 +1,26 @@
+/********** NAMESPACE DECLARATION *************/
 // Create namespace if it doesn't exist yet
 var App = App || {};
 
+// Conceptually equivalent to:
+if(typeof OtherNamespace === "undefined") {
+  var OtherNamespace = {}
+} else {
+  // Nothing to do
+}
+
+// It only works because of variable hoisting. 
+// The following throws an error because ProblematicNamespace is not defined
+//> if(!ProblematicNamespace) { }
+
+// as does the following
+//> OtherProblematicNamespace || {};
+
+// Variable hoisting means the namespace pattern is functionally equivalent to:
+var VerboseNamespace;
+VerboseNamespace = VerboseNamespace || {};
+
+/********* USING A NAMESPACE *****************/
 // Add a function to the namespace
 App.bedazzleTheWebsite = function () {
   console.log("App.bedazzleTheWebsite");

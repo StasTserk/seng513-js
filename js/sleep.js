@@ -1,18 +1,18 @@
 var App = App || {};
 
 App.Sleep = (function() {
-  var frequency;
+  var delay;
   var count = 0;
 
-  function Init(customFrequency) {
-    frequency = customFrequency
+  function Init(_delay) {
+    delay = _delay
     doStuff();
   }
 
   function doStuff() {
     App.HelloWorld.AddItem("Lap " + count);
     count = count + 1;
-    setTimeout(doStuff, frequency);
+    setTimeout(doStuff, delay);
   }
 
   return {

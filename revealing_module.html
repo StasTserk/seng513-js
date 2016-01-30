@@ -8,13 +8,16 @@
 
     <script>
       document.addEventListener('DOMContentLoaded', function(){ 
-        setTimeout(function() {
-          App.HelloWorld.Greet();                                   // prints “Hi there, stranger”
-          App.HelloWorld.Greet("bob");                              // prints “Hi there, bob”
-          App.HelloWorld.AddItem(typeof App);                       // prints “object”
-          App.HelloWorld.AddItem(typeof App.HelloWorld);            // prints “object”
-          App.HelloWorld.AddItem(typeof App.HelloWorld.Greet);      // prints “function”
-        }, 1000);
+        document.addEventListener("click", function() {
+          App.HelloWorld.Greet();                                                              // prints “Hi there, stranger”
+          App.HelloWorld.Greet("bob");                                                         // prints “Hi there, bob”
+        });
+        document.addEventListener("contextmenu", function(e) {
+          App.HelloWorld.AddItem("App: " + typeof App);                                        // prints “object”
+          App.HelloWorld.AddItem("App.HelloWorld: " + typeof App.HelloWorld);                  // prints “object”
+          App.HelloWorld.AddItem("App.HelloWorld.Greet: " + typeof App.HelloWorld.Greet);      // prints “function”
+          e.preventDefault();
+        });
       });
     </script>
   </body>

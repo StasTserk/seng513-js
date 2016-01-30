@@ -9,11 +9,11 @@
     <script>
       document.addEventListener('DOMContentLoaded', function(){ 
         setTimeout(function() {
-          App.HelloWorld.Greet(); 											            // prints “Hi there, stranger”
-          App.HelloWorld.Greet("bob"); 								            	// prints “Hi there, bob”
-          App.HelloWorld.AddItem(typeof App); 											// prints “object”
-          App.HelloWorld.AddItem(typeof App.HelloWorld); 					  // prints “object”
-          App.HelloWorld.AddItem(typeof App.HelloWorld.Greet); 		  // prints “function”
+          App.HelloWorld.Greet();                                   // prints “Hi there, stranger”
+          App.HelloWorld.Greet("bob");                              // prints “Hi there, bob”
+          App.HelloWorld.AddItem(typeof App);                       // prints “object”
+          App.HelloWorld.AddItem(typeof App.HelloWorld);            // prints “object”
+          App.HelloWorld.AddItem(typeof App.HelloWorld.Greet);      // prints “function”
         }, 1000);
       });
     </script>

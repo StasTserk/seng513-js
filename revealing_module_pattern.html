@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<title>Revealing Module Pattern Example</title>
+	</head>
+  <body>
+    <ul id="container"></ul>
+    <script src="js/hello_world.js"></script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function(){ 
+      App.HelloWorld.Greet(); 											            // prints “Hi there, stranger”
+      App.HelloWorld.Greet("bob"); 								            	// prints “Hi there, bob”
+      App.HelloWorld.AddItem(typeof App); 											// prints “object”
+      App.HelloWorld.AddItem(typeof App.HelloWorld); 					  // prints “object”
+      App.HelloWorld.AddItem(typeof App.HelloWorld.Greet); 		  // prints “function”
+    });
+    </script>
+  </body>
+</html>

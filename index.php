@@ -5,6 +5,15 @@
 
   <body>
     <h1>SENG 513 JavaScript Examples</h1>
+    <?php 
+      $fiddles = array(
+        "Namespace Pattern" => "https://jsfiddle.net/alexanderbird/vpnat41r/"
+      );
+      foreach($fiddles as $name => $url) {
+        echo "<li><a href='$url'>$name</a></li>";
+      }
+
+    ?>
     <dl>
       <?php
       foreach(scandir('.') as $file) {

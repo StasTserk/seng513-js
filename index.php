@@ -7,7 +7,9 @@
     <h1>SENG 513 JavaScript Examples</h1>
     <?php 
       $fiddles = array(
-        "Namespace Pattern" => "https://jsfiddle.net/alexanderbird/vpnat41r/"
+        "Namespace Pattern" => "https://jsfiddle.net/alexanderbird/vpnat41r/",
+        "Scoping Pattern" => "https://jsfiddle.net/alexanderbird/14b70wyo/",
+        "Revealing Module Pattern" => "https://jsfiddle.net/alexanderbird/hmh326yf/"
       );
       foreach($fiddles as $name => $url) {
         echo "<li><a href='$url'>$name</a></li>";
